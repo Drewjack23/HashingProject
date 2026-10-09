@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "password-lab"
+version = "1.0.0"
+description = "Local, synthetic password-cracking difficulty experiment (length vs hashing algorithm)."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "bcrypt>=4.0",
+    "argon2-cffi>=23.0",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+password-lab = "password_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

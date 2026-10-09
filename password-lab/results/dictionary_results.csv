@@ -1,0 +1,3 @@
+label,target,length,found_in_dictionary,dictionary_rank,dictionary_size,bruteforce_rank,note
+long but predictable,dragon2024,10,True,22,100,,"10 characters long, but it is word+year, so a dictionary guesser reaches it very early. Length did not protect it."
+short but random,cbad,4,False,,100,148,"Only 4 characters, but it is not in the dictionary at all, so a word-list attack never finds it. A brute-force attack would, but only by walking the enumeration order."
